@@ -448,6 +448,10 @@
     </style>
   </head>
   <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+      <filter id="doodle-soft" x="-8%" y="-8%" width="116%" height="116%"><feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="3" seed="7" result="n" /><feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" /></filter>
+      <filter id="doodle-rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="11" result="n" /><feDisplacementMap in="SourceGraphic" in2="n" scale="2.7" /></filter>
+    </defs></svg>
     <div id="petals" aria-hidden="true"></div>
     <nav>
       <div class="nav-in">
@@ -479,7 +483,7 @@
         <div class="count-box"><b id="c-mins">0</b><span>minutes</span></div>
         <div class="count-box"><b id="c-secs">0</b><span>seconds</span></div>
       </div>
-      <p class="since">Together since Saturday, 8 August 2026 · counting live, day one included</p>
+      <p class="since"><svg class="doodle-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.1 6.3c5.2-.4 10.5-.5 15.7-.1.3 4.9.2 9.7-.1 14.4-5.1.4-10.3.4-15.5.1-.3-4.8-.3-9.6-.1-14.4z"/><path d="M4 10h16.1M8.2 3.1c.1 1.5.1 3 0 4.5M16 2.9c.1 1.6.1 3.1 0 4.6"/><path d="M12 17.9c-1.8-1.3-2.7-2.3-2.7-3.4 0-.9.7-1.6 1.5-1.5.5 0 1 .3 1.2.8.2-.5.7-.8 1.2-.8.8-.1 1.5.6 1.5 1.5 0 1.1-.9 2.1-2.7 3.4z"/></svg>Together since Saturday, 8 August 2026 · counting live, day one included</p>
       <div class="milestone">
         <div class="bar"><div class="fill" id="mile-fill"></div></div>
         <p><span id="mile-left">Day 99 of 100</span><span>Day 100 · Sunday, 15 November 2026</span></p>
@@ -490,7 +494,7 @@
       </figure>
       <div class="hero-cta">
         <button class="btn btn-lav" id="hero-play" type="button">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.7 6.1c3 1.9 6.2 3.8 9.4 5.9-3.1 2.1-6.3 4.1-9.5 6-.3-3.9-.3-7.9.1-11.9z"/></svg>
           Play our songs
         </button>
         <a class="btn btn-ghost" href="#story">Read our story</a>
@@ -505,7 +509,7 @@
       </div>
       <div class="match-card reveal">
         <div class="flame" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.7 2.3c.3-.3.8-.1.9.3.5 2.3 1.9 3.9 3.2 5.4 1.2 1.4 2.2 2.9 2.2 5a7 7 0 1 1-14 0c0-1.5.5-2.8 1.2-4 .3-.5 1-.4 1.2.1.3.8.8 1.5 1.5 2-.2-2.9 1-6.4 3.5-8.6.4-.4.9-.8 1.3-1.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.9 2.5c.4-.3.9-.1 1 .4.4 2.2 1.7 3.8 3 5.3 1.2 1.4 2.2 2.9 2.1 5-.1 3.8-3.2 6.8-7 6.8-3.9 0-7-3.1-6.9-7 0-1.5.5-2.8 1.2-4 .3-.5 1-.4 1.2.1.3.8.7 1.4 1.3 1.9-.1-2.9 1.1-6.3 3.6-8.5.5-.4 1-.8 1.5-1.2z"/></svg>
         </div>
         <div>
           <h3>First, the Tinder match</h3>
@@ -519,7 +523,7 @@
               <div class="phone" aria-label="The first Tinder conversation between Henry and Olivia">
             <div class="phone-screen">
               <div class="chat-head">
-                <svg class="flamesvg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.7 2.3c.3-.3.8-.1.9.3.5 2.3 1.9 3.9 3.2 5.4 1.2 1.4 2.2 2.9 2.2 5a7 7 0 1 1-14 0c0-1.5.5-2.8 1.2-4 .3-.5 1-.4 1.2.1.3.8.8 1.5 1.5 2-.2-2.9 1-6.4 3.5-8.6.4-.4.9-.8 1.3-1.2z"/></svg>
+                <svg class="flamesvg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.9 2.5c.4-.3.9-.1 1 .4.4 2.2 1.7 3.8 3 5.3 1.2 1.4 2.2 2.9 2.1 5-.1 3.8-3.2 6.8-7 6.8-3.9 0-7-3.1-6.9-7 0-1.5.5-2.8 1.2-4 .3-.5 1-.4 1.2.1.3.8.7 1.4 1.3 1.9-.1-2.9 1.1-6.3 3.6-8.5.5-.4 1-.8 1.5-1.2z"/></svg>
                 <b>Henry and Olivia</b>
                 <span>Matched on Tinder</span>
               </div>
@@ -962,7 +966,7 @@
       }
       .frame::before{
         content:""; position:absolute; top:-11px; left:50%; width:76px; height:22px; z-index:2;
-        transform:translateX(-50%) rotate(-2deg); background:rgba(184,165,221,.45); border-radius:2px;
+        transform:translateX(-50%) rotate(-2deg); background:rgba(243,234,210,.65); border-radius:2px;
         border-left:1px dashed rgba(255,255,255,.55); border-right:1px dashed rgba(255,255,255,.55);
       }
       .frame:hover{ transform:rotate(0deg) translateY(-7px) scale(1.03); box-shadow:0 26px 44px rgba(49,32,76,.24); z-index:3; }
@@ -1046,7 +1050,7 @@
 
     <section id="stars" class="wrap">
       <div class="sec-head reveal">
-        <span class="hand">written in the stars, checked with an ephemeris</span>
+        <span class="hand"><svg class="doodle-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.2 3.1c.7 1.9 1.5 3.7 2.4 5.5 2 .2 4 .5 6 .9-1.5 1.3-3 2.7-4.4 4.1.4 2 .7 4 1 6-1.8-1-3.6-2.1-5.3-3.2-1.7 1.1-3.5 2.1-5.3 3 .3-2 .7-4 1.1-5.9C5.4 12.2 4 10.8 2.5 9.5c2-.3 4-.6 6-.8.8-1.9 1.7-3.7 2.7-5.6z"/></svg>written in the stars, checked with an ephemeris</span>
         <h2>Our Stars</h2>
         <p>Two birth charts, side by side. Hers in lavender, his in navy, just like everything else about them.</p>
       </div>
@@ -1144,7 +1148,7 @@
 
     <section id="compat" class="wrap">
       <div class="sec-head reveal">
-        <span class="hand">the charts keep agreeing with each other</span>
+        <span class="hand"><svg class="doodle-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.1 20.6C7.4 17 3.6 13.5 3.4 9.7 3.2 6.5 5.4 4.1 8 4.2c1.6.1 3 .9 3.9 2.1.8-1.3 2-2.2 3.6-2.3 2.6-.2 5 2 5.1 5.1.2 3.9-3.5 7.3-8.5 11.3z"/></svg>the charts keep agreeing with each other</span>
         <h2>Our Compatibility</h2>
         <p>No invented scores and no star ratings, just the real placements in both charts, and how they meet.</p>
       </div>
@@ -1161,7 +1165,7 @@
 
     <section id="song" class="wrap">
       <div class="sec-head reveal">
-        <span class="hand">press play, it is basically a rule now</span>
+        <span class="hand"><svg class="doodle-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.6 18.1c-.1-3.9-.1-7.9.1-11.8 3.5-1 7-1.9 10.6-2.6.1 3.8.1 7.7-.1 11.5"/><circle cx="7.1" cy="18.3" r="2.6"/><circle cx="17.6" cy="15.4" r="2.6"/></svg>press play, it is basically a rule now</span>
         <h2>Our Songs</h2>
         <p>Two favorite songs, one record player. Hers is Lauv, his is Bieber. Flip the switch, drop the needle.</p>
       </div>
@@ -1197,7 +1201,7 @@
           </div>
           <div class="pbtns">
             <button class="play-btn" id="play-btn" type="button" aria-label="Play or pause the song">
-              <svg id="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+              <svg id="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.7 6.1c3 1.9 6.2 3.8 9.4 5.9-3.1 2.1-6.3 4.1-9.5 6-.3-3.9-.3-7.9.1-11.9z"/></svg>
             </button>
             <button class="mini-btn" id="restart-btn" type="button">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 5V1L6 7l6 6V9a5 5 0 1 1-5 5H5a7 7 0 1 0 7-9z"/></svg>
@@ -1225,7 +1229,7 @@
       <h2 style="font-size:2rem;margin-top:4px;">The 100 Heart Challenge</h2>
       <p style="color:var(--muted);max-width:440px;margin:8px auto 4px;">One tap for every day. Think you can reach 100?</p>
       <button class="heart-btn" id="heart-btn" type="button" aria-label="Tap the heart">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.1 20.9C7.2 17.1 3.3 13.5 3.2 9.5 3.1 6.2 5.4 3.9 8.1 4c1.6.1 3 .9 3.9 2.2.7-1.4 2-2.4 3.6-2.5 2.7-.2 5 2 5.1 5.2.2 4-3.6 7.6-8.6 12z"/></svg>
       </button>
       <p class="count"><span id="heart-count">0</span> / 100 hearts</p>
       <p class="msg" id="heart-msg">Go on, tap it.</p>
@@ -1286,7 +1290,7 @@
         if (!reduced){
           var pwrap = document.getElementById("petals");
           var shades = ["#b8a5dd", "#c9b6ea", "#a58fd0", "#dccdf5", "#9d83cc"];
-          var PETAL = '<svg viewBox="0 0 24 30" width="100%" height="100%" aria-hidden="true"><path d="M12 1.5C18.5 7 21 14.5 12 28.5 3 14.5 5.5 7 12 1.5Z" fill="FILL"/><path d="M12 5v19" stroke="rgba(255,255,255,.4)" stroke-width="1.1" stroke-linecap="round" fill="none"/><path d="M12 11c2.2.6 3.6 2 4.4 3.8M12 16c-2.2.6-3.6 2-4.4 3.8" stroke="rgba(255,255,255,.28)" stroke-width="1" fill="none" stroke-linecap="round"/></svg>';
+          var PETAL = '<svg viewBox="0 0 24 30" width="100%" height="100%" aria-hidden="true"><path d="M12.2 1.9C18.4 7.2 20.9 14.7 12.1 28.2 3.3 14.5 5.6 7.3 12.2 1.9Z" fill="FILL" fill-opacity=".5" stroke="rgba(84,56,143,.55)" stroke-width="1.1" stroke-linejoin="round"/><path d="M12.1 5.2c.2 6.3.1 12.6-.2 18.8" stroke="rgba(84,56,143,.5)" stroke-width="1.1" stroke-linecap="round" fill="none"/><path d="M12 11.2c2.1.5 3.5 1.8 4.3 3.6M11.9 16.2c-2.1.5-3.5 1.9-4.3 3.7" stroke="rgba(84,56,143,.35)" stroke-width="1" fill="none" stroke-linecap="round"/></svg>';
           var NP = window.innerWidth < 640 ? 13 : 19;
           for (var pi = 0; pi < NP; pi++){
             var depth = Math.random(); /* 0 = far away, 1 = close to the viewer */
@@ -1314,7 +1318,7 @@
         }
 
         /* ---------- heart bursts ---------- */
-        var heartSVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="100%" height="100%"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>';
+        var heartSVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="100%" height="100%"><path d="M12.1 20.9C7.2 17.1 3.3 13.5 3.2 9.5 3.1 6.2 5.4 3.9 8.1 4c1.6.1 3 .9 3.9 2.2.7-1.4 2-2.4 3.6-2.5 2.7-.2 5 2 5.1 5.2.2 4-3.6 7.6-8.6 12z"/></svg>';
         function burst(x, y, n, spread){
           if (reduced) return;
           for (var i = 0; i < n; i++){
@@ -1656,7 +1660,7 @@
           vinyl.classList.toggle("spin", on);
           tonearm.classList.toggle("on", on);
           eq.classList.toggle("playing", on);
-          playIcon.innerHTML = on ? '<path d="M7 5h4v14H7zM13 5h4v14h-4z"/>' : '<path d="M8 5.5v13l11-6.5z"/>';
+          playIcon.innerHTML = on ? '<path d="M7.3 5.3l3.3.1-.2 13.3-3.2-.1zM13.5 5.2l3.3.2-.3 13.2-3.1.1z"/>' : '<path d="M8.7 6.1c3 1.9 6.2 3.8 9.4 5.9-3.1 2.1-6.3 4.1-9.5 6-.3-3.9-.3-7.9.1-11.9z"/>';
         }
         function loadCurrent(autoplay){
           if (!player || !player.loadVideoById) return;
@@ -1774,5 +1778,176 @@
         }
       })();
     </script>
+    <style>
+      /* ===== doodle icons + plain paper =====
+         Every icon gets a hand-drawn wobble from the pen filters above,
+         and every purple fill comes off the widgets: cards, panels,
+         badges and buttons are plain paper and ink now, with lavender
+         and navy living only in text, outlines and the doodles. */
+
+      /* hand-drawn wobble on every icon */
+      .btn svg, .mini-btn svg, .flamesvg, .big3 .chip svg, .lb-btn svg,
+      .ticket svg, .pg-ic, .tonearm, .doodle-ic, .burst-heart svg{
+        filter:url(#doodle-soft);
+      }
+      .glyph svg, .flame svg, .syn .ic svg, .play-btn svg{
+        filter:url(#doodle-rough);
+      }
+      .heart-btn svg{
+        filter:url(#doodle-rough) drop-shadow(0 10px 18px rgba(229,56,95,.35));
+      }
+      .wheel-card svg > g{ filter:url(#doodle-soft); }
+      .doodle-ic{ width:21px; height:21px; vertical-align:-5px; margin-right:7px; }
+      .since .doodle-ic{ color:var(--lav-deep); }
+      @media (prefers-color-scheme: dark){ .since .doodle-ic{ color:var(--lav); } }
+
+      /* paper sheets off: hero, section heads and notes sit on the paper */
+      .hero, .sec-head, .game, .fav-title, #favorites > p.hand, .chat-note{
+        background:transparent; border-color:transparent; box-shadow:none;
+      }
+      footer{ background:transparent; }
+      .wall-panel{ background:transparent; border-color:transparent; box-shadow:none; }
+
+      /* cards become plain ink outlines on the paper */
+      .match-card, .step, .gal figure, .little figure, .fav, .sign-card,
+      .wheel-card, .table-card, .moon-card, .bars-card, .asp-card, .dict,
+      .player, .ticket, .note{
+        background:transparent; box-shadow:none;
+      }
+      .note{ background:transparent; }
+      .frame{ background:#fffdf7; color:#31204c; }
+      .sign-card::before{ display:none; }
+
+      /* counter boxes: no purple slab, just a sketchy lavender outline */
+      .count-box{
+        background:transparent; box-shadow:none; border:2px solid var(--line);
+        border-radius:18px 22px 16px 24px/24px 16px 22px 18px;
+      }
+      .count-box.hero-num{
+        background:transparent; border:2px solid var(--lav-deep); color:var(--lav-deep);
+        border-radius:22px 16px 24px 18px/18px 24px 16px 22px;
+      }
+      .count-box.hero-num span{ color:var(--muted); }
+      @media (prefers-color-scheme: dark){
+        .count-box.hero-num{ border-color:var(--lav); color:var(--lav); }
+      }
+
+      /* heading flourish: a pen squiggle instead of a gradient bar */
+      .sec-head h2::after{
+        width:96px; height:7px; border-radius:0;
+        background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='7' viewBox='0 0 96 7'%3E%3Cpath d='M1 4 Q 9 1, 17 4 T 33 4 T 49 4 T 65 4 T 81 4 T 95 4' fill='none' stroke='%236d4cae' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
+      }
+      @media (prefers-color-scheme: dark){
+        .sec-head h2::after{
+          background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='7' viewBox='0 0 96 7'%3E%3Cpath d='M1 4 Q 9 1, 17 4 T 33 4 T 49 4 T 65 4 T 81 4 T 95 4' fill='none' stroke='%23b3a0dc' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
+        }
+      }
+
+      /* progress and element bars: pen hatching, not solid purple */
+      .milestone .bar{ background:transparent; border:1.5px solid var(--lav-deep); height:14px; }
+      .milestone .fill{
+        background:repeating-linear-gradient(45deg, var(--lav-deep) 0, var(--lav-deep) 4px, rgba(109,76,174,.35) 4px, rgba(109,76,174,.35) 8px);
+      }
+      .track{ background:transparent; border:1.5px solid var(--line); height:12px; }
+      .fill-lav{ background:repeating-linear-gradient(45deg, var(--lav-deep) 0, var(--lav-deep) 3px, transparent 3px, transparent 7px); }
+      .fill-navy{ background:repeating-linear-gradient(45deg, var(--navy) 0, var(--navy) 3px, transparent 3px, transparent 7px); }
+      @media (prefers-color-scheme: dark){
+        .fill-navy{ background:repeating-linear-gradient(45deg, #7d9ccb 0, #7d9ccb 3px, transparent 3px, transparent 7px); }
+      }
+
+      /* buttons: ink and outline, no fills */
+      .btn{ border-radius:255px 18px 225px 18px/18px 225px 18px 255px; }
+      .btn-lav{
+        background:transparent; color:var(--lav-deep);
+        border:2px solid var(--lav-deep); box-shadow:none;
+      }
+      .btn-ghost{ background:transparent; border:2px solid var(--line); }
+      @media (prefers-color-scheme: dark){ .btn-lav{ color:var(--lav); border-color:var(--lav); } }
+      .play-btn{
+        background:transparent; color:var(--lav-deep);
+        border:2.5px solid var(--lav-deep); box-shadow:none;
+        border-radius:58% 42% 55% 45%/48% 55% 45% 52%;
+      }
+      @media (prefers-color-scheme: dark){ .play-btn{ color:var(--lav); border-color:var(--lav); } }
+      .mini-btn{ background:transparent; border-radius:18px 225px 18px 255px/255px 18px 225px 18px; }
+      nav a:hover{ background:transparent; color:var(--lav-deep); }
+      @media (prefers-color-scheme: dark){ nav a:hover{ color:var(--lav); } }
+
+      /* song switch: plain outline, the chosen side is just ringed in pen */
+      .switch{ background:transparent; border:1.5px solid var(--line); border-radius:26px 30px 24px 28px/28px 24px 30px 26px; }
+      .switch button{ border:1.5px solid transparent; }
+      @media (prefers-color-scheme: dark){
+        .eq i{ border-color:var(--lav); }
+        .milestone .bar{ border-color:var(--lav); }
+      }
+      .switch button[aria-pressed="true"]{
+        background:transparent; color:var(--lav-deep); box-shadow:none;
+        border:1.5px solid var(--lav-deep); border-radius:20px 24px 18px 22px/22px 18px 24px 20px;
+      }
+      .switch button[data-side="his"][aria-pressed="true"]{
+        background:transparent; color:var(--navy); border-color:var(--navy); box-shadow:none;
+      }
+      @media (prefers-color-scheme: dark){
+        .switch button[aria-pressed="true"]{ color:var(--lav); border-color:var(--lav); }
+        .switch button[data-side="his"][aria-pressed="true"]{ color:#9db6dd; border-color:#9db6dd; }
+      }
+
+      /* equalizer bars become little outlined doodle bars */
+      .eq i{ background:transparent; border:1.5px solid var(--lav-deep); width:7px; }
+
+      /* hero pills lose their tinted backgrounds */
+      .hero [style*="background:var(--lav-soft)"],
+      .hero [style*="background:var(--surface2)"]{ background:transparent !important; }
+
+      /* sign chips: plain outline */
+      .big3 .chip{
+        background:transparent;
+        border-radius:14px 18px 12px 16px/16px 12px 18px 14px;
+      }
+
+      /* match flame: no tinted tile, just the doodle flame */
+      .flame{ background:transparent; }
+      @media (prefers-color-scheme: dark){ .flame{ background:transparent; } }
+
+      /* chat: her bubble is an outline now, day label plain */
+      .msg.olivia{ background:transparent; border:1.5px solid var(--lav-deep); }
+      @media (prefers-color-scheme: dark){ .msg.olivia{ border-color:var(--lav); } }
+      .day-label{ background:transparent; }
+
+      /* movie tickets: no tinted icon tiles, badges or stubs */
+      .ticket.lav .t-ic, .ticket.navy .t-ic{
+        background:transparent; border:2px solid currentColor;
+        border-radius:16px 20px 14px 18px/18px 14px 20px 16px;
+      }
+      .ticket.lav .t-order{
+        background:transparent; color:var(--lav-deep); border:1.5px solid var(--lav-deep);
+      }
+      .ticket.navy .t-order{
+        background:transparent; color:var(--navy); border:1.5px solid var(--navy);
+      }
+      .ticket.lav .t-stub, .ticket.navy .t-stub{ background:transparent; }
+      @media (prefers-color-scheme: dark){
+        .ticket.lav .t-order{ color:var(--lav); border-color:var(--lav); }
+        .ticket.navy .t-order{ color:#9db6dd; border-color:#9db6dd; }
+        .ticket.navy .t-stub{ background:transparent; }
+      }
+
+      /* compatibility: the big purple panel is gone, words on paper */
+      .syn{
+        background:transparent; color:var(--ink); box-shadow:none;
+        border:1.5px solid var(--line); border-radius:var(--radius);
+      }
+      .syn li .ic{
+        background:transparent; border:1.5px solid var(--lav-deep); color:var(--lav-deep);
+        border-radius:14px 17px 13px 16px/16px 13px 17px 14px;
+      }
+      .syn li:nth-child(2) .ic, .syn li:nth-child(4) .ic{
+        border-color:var(--navy); color:var(--navy);
+      }
+      @media (prefers-color-scheme: dark){
+        .syn li .ic{ border-color:var(--lav); color:var(--lav); }
+        .syn li:nth-child(2) .ic, .syn li:nth-child(4) .ic{ border-color:#9db6dd; color:#9db6dd; }
+      }
+    </style>
   </body>
 </html>
