@@ -11,7 +11,7 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="100 Days of Us" />
-    <noscript><style>.reveal{opacity:1 !important;transform:none !important}.msg,.day-label{opacity:1 !important;transform:none !important}</style></noscript>
+    <noscript><style>.reveal{opacity:1 !important;transform:none !important}.msg,.day-label{opacity:1 !important;transform:none !important}#loader{display:none !important}</style></noscript>
     <title>Henry and Olivia · 100 Days of Us</title>
     <style>
       button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2.25rem; }
@@ -442,6 +442,47 @@
       body{ animation:pageIn .6s ease both; }
       @keyframes pageIn{ from{ opacity:0; } to{ opacity:1; } }
       @media (prefers-reduced-motion: reduce){ body{ animation:none; } }
+
+      /* loading screen: "Loading our days" with a lavender bloom burst,
+         shown first for 3 seconds, then the site opens */
+      #loader{
+        position:fixed; inset:0; z-index:300; background:var(--bg);
+        display:flex; align-items:center; justify-content:center; text-align:center; padding:24px;
+        transition:opacity .6s ease, visibility .6s ease;
+        animation:loaderGone .6s ease 3.8s forwards;
+      }
+      #loader.done{ opacity:0; visibility:hidden; pointer-events:none; }
+      @keyframes loaderGone{ to{ opacity:0; visibility:hidden; } }
+      .loader-inner{ display:flex; flex-direction:column; align-items:center; }
+      .loader-bloom{ width:136px; height:136px; animation:bloomPulse 2.2s ease-in-out infinite alternate; }
+      @keyframes bloomPulse{ from{ transform:scale(.96) rotate(-2deg); } to{ transform:scale(1.05) rotate(2deg); } }
+      .bloom-petals{ transform-box:fill-box; transform-origin:center; animation:bloomOpen 1.05s cubic-bezier(.34,1.4,.64,1) both; }
+      @keyframes bloomOpen{ from{ transform:scale(.2) rotate(-14deg); } to{ transform:scale(1) rotate(0deg); } }
+      .loader-bloom .petal{ opacity:0; animation:petalIn .55s ease forwards; }
+      .loader-bloom .petal:nth-child(1){ animation-delay:.05s; } .loader-bloom .petal:nth-child(2){ animation-delay:.13s; }
+      .loader-bloom .petal:nth-child(3){ animation-delay:.21s; } .loader-bloom .petal:nth-child(4){ animation-delay:.29s; }
+      .loader-bloom .petal:nth-child(5){ animation-delay:.37s; } .loader-bloom .petal:nth-child(6){ animation-delay:.45s; }
+      .loader-bloom .petal:nth-child(7){ animation-delay:.53s; } .loader-bloom .petal:nth-child(8){ animation-delay:.61s; }
+      @keyframes petalIn{ from{ opacity:0; } to{ opacity:1; } }
+      .ldot{ opacity:0; animation:ldotBurst 2.6s ease-out infinite; }
+      @keyframes ldotBurst{
+        0%{ transform:translate(0,0); opacity:0; }
+        10%{ opacity:1; }
+        52%{ transform:translate(var(--dx),var(--dy)); opacity:0; }
+        100%{ transform:translate(var(--dx),var(--dy)); opacity:0; }
+      }
+      .loader-text{ font-size:clamp(1.8rem,6vw,2.4rem); margin:14px 0 0; color:var(--ink); line-height:1.2; }
+      .loader-text em{ font-style:italic; color:var(--lav-deep); }
+      @media (prefers-color-scheme: dark){ .loader-text em{ color:var(--lav); } }
+      .loader-dots i{ font-style:normal; color:var(--lav-deep); animation:dotBlink 1.3s ease-in-out infinite; }
+      .loader-dots i:nth-child(2){ animation-delay:.22s; } .loader-dots i:nth-child(3){ animation-delay:.44s; }
+      @media (prefers-color-scheme: dark){ .loader-dots i{ color:var(--lav); } }
+      @keyframes dotBlink{ 0%,100%{ opacity:.15; } 50%{ opacity:1; } }
+      @media (prefers-reduced-motion: reduce){
+        #loader{ animation:loaderGone .6s ease 3.8s forwards; }
+        .loader-bloom, .bloom-petals, .loader-bloom .petal, .ldot, .loader-dots i{ animation:none !important; }
+        .loader-bloom .petal, .ldot{ opacity:1; }
+      }
     </style>
   </head>
   <body>
@@ -449,6 +490,43 @@
       <filter id="doodle-soft" x="-8%" y="-8%" width="116%" height="116%"><feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="3" seed="7" result="n" /><feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" /></filter>
       <filter id="doodle-rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="11" result="n" /><feDisplacementMap in="SourceGraphic" in2="n" scale="2.7" /></filter>
     </defs></svg>
+    <div id="loader" role="status" aria-label="Loading our days">
+      <div class="loader-inner">
+        <svg class="loader-bloom" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+          <defs>
+            <path id="lpetal" d="M60 57 C51 41 52 24 60 9 C68 24 69 41 60 57 Z" />
+          </defs>
+          <g class="bloom-petals" fill="#b8a5dd" stroke="#4a1091" stroke-width="2" stroke-linejoin="round">
+            <use href="#lpetal" class="petal" transform="rotate(0 60 60)" />
+            <use href="#lpetal" class="petal" transform="rotate(45 60 60)" />
+            <use href="#lpetal" class="petal" transform="rotate(90 60 60)" />
+            <use href="#lpetal" class="petal" transform="rotate(135 60 60)" />
+            <use href="#lpetal" class="petal" transform="rotate(180 60 60)" />
+            <use href="#lpetal" class="petal" transform="rotate(225 60 60)" />
+            <use href="#lpetal" class="petal" transform="rotate(270 60 60)" />
+            <use href="#lpetal" class="petal" transform="rotate(315 60 60)" />
+          </g>
+          <circle cx="60" cy="60" r="8.5" fill="#4a1091" />
+          <g fill="#b8a5dd">
+            <circle class="ldot" cx="60" cy="60" r="3.2" style="--dx:-46px;--dy:-30px;" />
+            <circle class="ldot" cx="60" cy="60" r="2.6" style="--dx:44px;--dy:-38px;animation-delay:.15s;" />
+            <circle class="ldot" cx="60" cy="60" r="3" style="--dx:52px;--dy:16px;animation-delay:.3s;" />
+            <circle class="ldot" cx="60" cy="60" r="2.4" style="--dx:-52px;--dy:22px;animation-delay:.45s;" />
+            <circle class="ldot" cx="60" cy="60" r="2.8" style="--dx:-16px;--dy:50px;animation-delay:.6s;" />
+            <circle class="ldot" cx="60" cy="60" r="2.5" style="--dx:22px;--dy:48px;animation-delay:.75s;" />
+            <circle class="ldot" cx="60" cy="60" r="2.2" style="--dx:6px;--dy:-54px;animation-delay:.9s;" />
+            <circle class="ldot" cx="60" cy="60" r="2.7" style="--dx:-38px;--dy:-46px;animation-delay:1.05s;" />
+          </g>
+          <g fill="#4a1091">
+            <circle class="ldot" cx="60" cy="60" r="2" style="--dx:34px;--dy:-52px;animation-delay:.5s;" />
+            <circle class="ldot" cx="60" cy="60" r="2" style="--dx:-58px;--dy:-8px;animation-delay:1.2s;" />
+            <circle class="ldot" cx="60" cy="60" r="2" style="--dx:58px;--dy:-6px;animation-delay:.2s;" />
+            <circle class="ldot" cx="60" cy="60" r="2" style="--dx:-28px;--dy:44px;animation-delay:1.35s;" />
+          </g>
+        </svg>
+        <p class="loader-text">Loading <em>our days</em><span class="loader-dots" aria-hidden="true"><i>.</i><i>.</i><i>.</i></span></p>
+      </div>
+    </div>
     <div id="petals" aria-hidden="true"></div>
     <nav>
       <div class="nav-in">
@@ -802,7 +880,7 @@
           </article>
         </div>
       </div>
-      <p style="text-align:center;" class="hand"><span style="font-size:1.45rem;color:var(--lav-deep);">lavender meets navy, and somehow it just works</span></p>
+      <p style="text-align:center;" class="hand"><span class="deep-accent" style="font-size:1.45rem;">lavender meets navy, and somehow it just works</span></p>
     </section>
     <style>
       /* Tinder chat */
@@ -1222,7 +1300,7 @@
     </section>
 
     <div class="game wrap">
-      <span class="hand" style="font-size:1.6rem;color:var(--lav-deep);">one more thing, olivia</span>
+      <span class="hand deep-accent" style="font-size:1.6rem;">one more thing, olivia</span>
       <h2 style="font-size:2rem;margin-top:4px;">The 100 Heart Challenge</h2>
       <p style="color:var(--muted);max-width:440px;margin:8px auto 4px;">One tap for every day. Think you can reach 100?</p>
       <button class="heart-btn" id="heart-btn" type="button" aria-label="Tap the heart">
@@ -1251,6 +1329,17 @@
       (function(){
         "use strict";
         var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        /* ---------- loading screen: 3 seconds, then the site opens ---------- */
+        var loaderEl = document.getElementById("loader");
+        if (loaderEl){
+          document.body.style.overflow = "hidden";
+          setTimeout(function(){
+            loaderEl.classList.add("done");
+            document.body.style.overflow = "";
+            setTimeout(function(){ if (loaderEl.parentNode) loaderEl.parentNode.removeChild(loaderEl); }, 750);
+          }, 3000);
+        }
 
         /* ---------- live counter ---------- */
         var START = Date.UTC(2026, 7, 7, 17, 30, 0); /* 8 Aug 2026, 00:00 Yangon (UTC+6:30), counted as day 1 */
@@ -1328,7 +1417,7 @@
             s.style.setProperty("--dy", (-(30 + Math.random() * 80)) + "px");
             s.style.setProperty("--rot", (Math.random() * 90 - 45) + "deg");
             if (i % 3 === 1) s.style.color = "#b8a5dd";
-            if (i % 3 === 2) s.style.color = "#4a1091";
+            if (i % 3 === 2) s.style.color = window.matchMedia("(prefers-color-scheme: dark)").matches ? "#b3a0dc" : "#4a1091";
             s.innerHTML = heartSVG;
             document.body.appendChild(s);
             (function(el){ setTimeout(function(){ el.remove(); }, 1000); })(s);
@@ -1459,6 +1548,19 @@
           }
         };
         var ASP_STYLE = { conjunct:["#c2437e",1.6], opposite:["#c2437e",1.3], square:["#d97706",1.2], trine:["#4c9a6c",1.3], sextile:["#4a1091",1.1] };
+        /* chart ink follows the color scheme, so glyphs, labels and icons
+           stay clearly readable on the dark background too */
+        var DARK_SCHEME = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (DARK_SCHEME){
+          CHARTS.olivia.color = "#cdbcf0";
+          CHARTS.henry.color = "#a9c2e8";
+          ASP_STYLE.sextile = ["#a582e8", 1.1];
+          ASP_STYLE.trine = ["#7cc79b", 1.3];
+          ASP_STYLE.conjunct = ["#e77ca5", 1.6];
+          ASP_STYLE.opposite = ["#e77ca5", 1.3];
+          ASP_STYLE.square = ["#eda33c", 1.2];
+        }
+        var SIGN_STROKE = DARK_SCHEME ? "#cdbcf0" : "#5f478a";
 
         function pt(cx, cy, r, lon, asc){
           var a = (180 - (lon - asc)) * Math.PI / 180;
@@ -1487,7 +1589,7 @@
             var sg = document.createElementNS(NS, "g");
             sg.setAttribute("transform", "translate(" + (mid[0] - 8.5) + " " + (mid[1] - 8.5) + ") scale(0.7083)");
             sg.setAttribute("fill", "none");
-            sg.setAttribute("stroke", "#8a76a8");
+            sg.setAttribute("stroke", SIGN_STROKE);
             sg.setAttribute("stroke-width", "2.1");
             sg.setAttribute("stroke-linecap", "round");
             sg.setAttribute("stroke-linejoin", "round");
@@ -1944,6 +2046,45 @@
       @media (prefers-color-scheme: dark){
         .syn li .ic{ border-color:var(--lav); color:var(--lav); }
         .syn li:nth-child(2) .ic, .syn li:nth-child(4) .ic{ border-color:#9db6dd; color:#9db6dd; }
+      }
+    </style>
+    <style>
+      /* ===== readability pass: every word clearly readable =====
+         Body text stays near-black, accents stay in the deep contrasted
+         purple, and the few places where text sat on a bright gradient,
+         a photo, or (in dark mode) a dark slab are strengthened here. */
+
+      /* deep purple accent lines that also work in dark mode */
+      .deep-accent{ color:var(--lav-deep); }
+      @media (prefers-color-scheme: dark){ .deep-accent{ color:var(--lav); } }
+
+      /* chat: white words on the Tinder gradient get a deeper gradient,
+         full opacity and a soft shadow, so every bubble reads clearly */
+      .chat-head{ background:linear-gradient(120deg,#d90f57,#e64c1e); }
+      .msg.henry{ background:linear-gradient(120deg,#d90f57,#e64c1e); }
+      .chat-head, .msg.henry{ text-shadow:0 1px 3px rgba(110,0,38,.45); }
+      .chat-head span{ opacity:1; }
+      .msg .who{ opacity:.95; }
+
+      /* caption over the hero photo: a stronger shade behind the words */
+      .hero-photo figcaption{
+        background:linear-gradient(transparent, rgba(24,12,40,.84));
+        text-shadow:0 1px 6px rgba(20,8,36,.65);
+      }
+
+      /* lightbox counter: brighter lavender on the near-black backdrop */
+      #lb-count{ color:#e2d4fa; }
+
+      @media (prefers-color-scheme: dark){
+        /* retrograde marks in the planet tables */
+        td .rx{ color:#ff9ec4; }
+        /* hatched element bars and the milestone fill, in light lavender */
+        .fill-lav{ background:repeating-linear-gradient(45deg, var(--lav) 0, var(--lav) 3px, transparent 3px, transparent 7px); }
+        .milestone .fill{ background:repeating-linear-gradient(45deg, var(--lav) 0, var(--lav) 4px, rgba(179,160,220,.45) 4px, rgba(179,160,220,.45) 8px); }
+        /* the honest-note dashed border */
+        .note{ border-color:var(--lav); }
+        /* the big heart of the 100 Heart Challenge */
+        .heart-btn{ color:#ff7d9c; }
       }
     </style>
   </body>
