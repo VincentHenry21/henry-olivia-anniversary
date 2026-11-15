@@ -1136,6 +1136,9 @@
       .moon-phase{ position:absolute; inset:-3%; border-radius:50%; background:#1d1429; filter:blur(2.5px); }
       .moon-phase.waxing{ transform:translateX(-9.5%); }
       .moon-phase.waning{ transform:translateX(9.5%); }
+      /* waxing gibbous: dark band over the left ~43% of the disc, so a little
+         more than half the moon stays lit, terminator just left of centre */
+      .moon-phase.gibbous{ inset:-3% auto -3% -3%; width:47.5%; border-radius:0; transform:none; }
 
       /* compatibility panel */
       .syn .syn-intro{ margin:0 0 18px; font-size:1.02rem; opacity:.92; max-width:640px; }
@@ -1191,11 +1194,11 @@
           <div class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5 5.5 5 9 8.5 12.5 5 16 8.5 19.5 5 22 7.5"/><path d="M2 16.5 5.5 13 9 16.5 12.5 13 16 16.5 19.5 13 22 15.5"/></svg></div>
           <p class="who">Olivia · Tourism</p>
           <h3>Aquarius</h3>
-          <p class="bday">Born 3 February 2003 · Sun at 13°58 Aquarius</p>
+          <p class="bday">Born 10 February 2003 · Sun at 21°03 Aquarius</p>
           <p class="trait">The original thinker of the zodiac. Curious, independent, and always one idea ahead of everyone else in the room.</p>
           <div class="big3">
             <div class="chip"><small>Sun</small><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.5 5.5 5 9 8.5 12.5 5 16 8.5 19.5 5 22 7.5"/><path d="M2 16.5 5.5 13 9 16.5 12.5 13 16 16.5 19.5 13 22 15.5"/></svg>Aquarius</b></div>
-            <div class="chip"><small>Moon</small><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5C5 8 5 16 8 20.5M16 3.5c3 4.5 3 12.5 0 17M4.5 12h15"/></svg>Pisces *</b></div>
+            <div class="chip"><small>Moon</small><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15" r="4.6"/><path d="M4.5 5.5C6.5 9.5 9.3 11 12 11s5.5-1.5 7.5-5.5"/></svg>Taurus *</b></div>
             <div class="chip"><small>Rising</small><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15" r="4.6"/><path d="M4.5 5.5C6.5 9.5 9.3 11 12 11s5.5-1.5 7.5-5.5"/></svg>Taurus †</b></div>
           </div>
         </article>
@@ -1217,7 +1220,7 @@
         <div class="wheel-card reveal">
           <h3>Olivia's Chart Wheel</h3>
           <div id="wheel-olivia" role="img" aria-label="Olivia's birth chart wheel showing her planet positions"></div>
-          <p class="est">Ascendant 19°36 Taurus and MC 9°12 Aquarius, noon estimates †</p>
+          <p class="est">Ascendant 26°58 Taurus and MC 16°05 Aquarius, noon estimates †</p>
         </div>
         <div class="wheel-card reveal">
           <h3>Henry's Chart Wheel</h3>
@@ -1239,17 +1242,17 @@
 
       <div class="moons">
         <div class="moon-card reveal">
-          <div class="moon3d ring-lav" role="img" aria-label="Olivia's moon on her birthday: a thin waxing crescent, 3.4 percent lit"><div class="moon-sphere"><div class="moon-texture"></div><div class="moon-phase waxing"></div></div></div>
+          <div class="moon3d ring-lav" role="img" aria-label="Olivia's moon on her birthday: a waxing gibbous moon, 57.2 percent lit"><div class="moon-sphere"><div class="moon-texture"></div><div class="moon-phase gibbous"></div></div></div>
           <div>
-            <h3>Olivia's Moon · 3.4% lit</h3>
-            <p>Waxing, just past the New Moon on 3 February 2003. A brand new moon for a brand new chapter. Her Moon sign carries a note, see below.</p>
+            <h3>Olivia's Moon · 57.2% lit</h3>
+            <p>Waxing gibbous on 10 February 2003, more than half lit and still growing toward full. Her Moon sign carries a note, see below.</p>
           </div>
         </div>
         <div class="moon-card reveal">
           <div class="moon3d ring-navy" role="img" aria-label="Henry's moon on his birthday: a thin waning crescent, 4.9 percent lit"><div class="moon-sphere"><div class="moon-texture"></div><div class="moon-phase waning"></div></div></div>
           <div>
             <h3>Henry's Moon · 4.9% lit</h3>
-            <p>Waning, nearly at the New Moon on 6 January 2008. Both of them were born under an almost new moon. Both of them are new beginning people.</p>
+            <p>Waning, nearly at the New Moon on 6 January 2008. He was born under an almost new moon, a brand new beginning, while hers was already more than half lit and growing. A fresh start, and a moon in full stride.</p>
           </div>
         </div>
       </div>
@@ -1273,7 +1276,7 @@
       <div class="note reveal">
         <b>An honest note about these charts.</b> No birth times were given, so both charts were calculated for noon, Yangon time, with the birthplace taken as Yangon. The Sun signs and planet positions are for the birth day and are solid. The Ascendant, MC, and house placements marked † are noon estimates, and exact houses need a birth time.
         <br /><br />
-        <b>* Olivia's Moon.</b> At noon on 3 February 2003 her Moon was at 5°05 Pisces, but the Moon only entered Pisces at about 1:30 AM that day. If Olivia was born before then, her Moon is Aquarius instead. Send over both birth times any day and these charts can be made exact.
+        <b>* Olivia's Moon.</b> At noon on 10 February 2003 her Moon was at 29°22 Taurus, right at the end of the sign, and it moved into Gemini early that afternoon. If Olivia was born in the morning, her Moon is Taurus; if she was born in the afternoon, her Moon is Gemini. Send over both birth times any day and these charts can be made exact.
       </div>
     </section>
 
@@ -1286,10 +1289,10 @@
       <div class="syn reveal">
         <p class="syn-intro">Four things the two charts genuinely share, read straight from their computed birth data.</p>
         <ul>
-          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="9" r="5.4"/><path d="M12 14.4V21M8.2 17.8h7.6"/></svg></span><span><b>Both Venus in Sagittarius.</b> They love the same way: honestly, warmly, and always up for an adventure.</span></li>
-          <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.6 8.6 0 1 1 9.4 3.9a7.2 7.2 0 0 0 10.6 10.7Z" fill="currentColor"/></svg></span><span><b>His Moon meets her Venus and Mars.</b> Henry's Sagittarius Moon sits with Olivia's Venus and Mars in Sagittarius. He feels at home in her heart, and she feels it too.</span></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="9" r="5.4"/><path d="M12 14.4V21M8.2 17.8h7.6"/></svg></span><span><b>Her Venus meets his Jupiter.</b> Olivia's Venus at 6°26 Capricorn sits close to Henry's Jupiter at 4°13 Capricorn, barely two degrees apart in the same steady sign. Her love meets his luck and his generosity, on ground they both trust.</span></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.6 8.6 0 1 1 9.4 3.9a7.2 7.2 0 0 0 10.6 10.7Z" fill="currentColor"/></svg></span><span><b>His Moon sits on her Pluto.</b> Henry's Moon at 19°42 Sagittarius is almost exactly on Olivia's Pluto at 19°29 Sagittarius, thirteen minutes of arc apart. His feelings about her run deep. Nothing surface level, ever.</span></li>
           <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="12" r="4.2"/><circle cx="8" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="16.8" cy="12" r="4.2"/><circle cx="16.8" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg></span><span><b>Neighboring Suns.</b> Capricorn and Aquarius sit side by side in the zodiac. Different flavors, same street.</span></li>
-          <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.6 8.6 0 1 1 9.4 3.9a7.2 7.2 0 0 0 10.6 10.7Z" fill="currentColor" transform="translate(-6.5 1.5) scale(0.8)"/><path d="M20 14.6A8.6 8.6 0 0 0 9.4 3.9a7.2 7.2 0 0 1 10.6 10.7Z" fill="currentColor" transform="translate(7 -1.5) scale(0.8)"/></svg></span><span><b>Two near new moons.</b> Hers 3.4% lit and waxing, his 4.9% lit and waning. Two fresh starts that found each other.</span></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="14" r="5.4"/><path d="M13.8 10.2 20 4M14.2 4H20v5.8"/></svg></span><span><b>His Moon meets her Mars.</b> Henry's Moon is in Sagittarius, the same sign as Olivia's Mars at 15°29 Sagittarius. His heart and her fire speak the same language: honest, warm, and always up for an adventure.</span></li>
         </ul>
       </div>
     </section>
@@ -1604,23 +1607,23 @@
         var SIGNS = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn","Aquarius","Pisces"];
         var CHARTS = {
           olivia: {
-            asc: 49.60, color: "#4a1091",
+            asc: 56.97, color: "#4a1091",
             planets: [
-              ["Sun","13°58 Aquarius",313.97,10,false],["Moon","5°05 Pisces",335.08,10,false],
-              ["Mercury","18°39 Capricorn",288.65,9,false],["Venus","28°30 Sagittarius",268.50,8,false],
-              ["Mars","10°59 Sagittarius",250.98,7,false],["Jupiter","12°59 Leo",132.98,4,true],
-              ["Saturn","22°28 Gemini",82.47,2,true],["Uranus","27°58 Aquarius",327.97,10,false],
-              ["Neptune","10°47 Aquarius",310.78,10,false],["Pluto","19°19 Sagittarius",259.32,8,false]
+              ["Sun","21°03 Aquarius",321.05,10,false],["Moon","29°22 Taurus",59.37,1,false],
+              ["Mercury","26°26 Capricorn",296.43,9,false],["Venus","6°26 Capricorn",276.43,8,false],
+              ["Mars","15°29 Sagittarius",255.48,7,false],["Jupiter","12°04 Leo",132.07,3,true],
+              ["Saturn","22°16 Gemini",82.27,1,true],["Uranus","28°22 Aquarius",328.37,10,false],
+              ["Neptune","11°03 Aquarius",311.05,9,false],["Pluto","19°29 Sagittarius",259.48,7,false]
             ],
             aspects: [
-              ["Sun sextile Mars",2.98],["Sun opposite Jupiter",0.97],["Sun conjunct Neptune",3.17],
-              ["Sun sextile Pluto",5.36],["Moon square Mars",5.91],["Moon conjunct Uranus",7.11],
-              ["Venus opposite Saturn",6.03],["Venus sextile Uranus",0.54],["Mars trine Jupiter",2.00],
-              ["Mars sextile Neptune",0.20],["Jupiter opposite Neptune",2.20],["Jupiter trine Pluto",6.33],
-              ["Saturn trine Uranus",5.49],["Saturn opposite Pluto",3.15]
+              ["Sun sextile Mars",5.57],["Sun trine Saturn",1.22],["Sun conjunct Uranus",7.31],
+              ["Sun sextile Pluto",1.57],["Moon trine Mercury",2.94],["Moon square Uranus",1.01],
+              ["Mars trine Jupiter",3.42],["Mars opposite Saturn",6.79],["Mars sextile Neptune",4.44],
+              ["Mars conjunct Pluto",4.00],["Jupiter opposite Neptune",1.01],["Jupiter trine Pluto",7.43],
+              ["Saturn trine Uranus",6.09],["Saturn opposite Pluto",2.78]
             ],
-            elements: [["Fire",4],["Earth",1],["Air",4],["Water",1]],
-            qualities: [["Cardinal",1],["Fixed",4],["Mutable",5]]
+            elements: [["Fire",3],["Earth",3],["Air",4],["Water",0]],
+            qualities: [["Cardinal",2],["Fixed",5],["Mutable",3]]
           },
           henry: {
             asc: 17.23, color: "#2f466f",
